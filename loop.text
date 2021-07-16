@@ -1,0 +1,97 @@
+LOOP (vòng lặp )
+
+
+1.Vòng lăp "While" 
+  1.1 #Cú pháp 
+     while [ dieu kien de thưc hien ]
+      do 
+        thưc hien
+      done 
+  1.2.Ví Du 
+	 #!/bin/bash 
+	 echo " nhap a ="
+	  read a 
+	 while [ $a -lt 10 ]
+	  do 
+	     echo $a ;
+	     let a=$a+1  # tăng a len môt neu while chưa dưng
+	 done 
+ 
+
+2.Vòng lăp "For"
+   2.1#Cú pháp 1
+    for var in word1 word2 .. wordN
+    do
+       thuc hien
+    done 
+    #Cu phap 2 
+    for (( i=n ;i<=N;i++)) như trong C
+    do
+     thuc hien
+    done 
+  2.2 Ví Dụ :
+      #!/bin/bash 
+      for var in 1 2 3 4 5 6 
+      do
+       echo " $var "
+      done
+      
+      
+      
+      #!/bin/bash
+      for(( i=1 ;i<=5;i++))
+      do
+       if [ $i == '4' ]
+       then
+       echo " $i "
+       fi
+      done
+      
+      
+      
+      
+3.Vòng lăp Until giống như while
+4.Vòng lăp "Select" 
+ 4.1#Cú pháp 
+     select var in word1 word2 ... wordN
+     do 
+       thuc hien 
+     done
+    # tạo ra một menu dươc đánh số thứ tự giúp người dùng có thể lựa chọn 
+ 4.2 Ví Du :
+ #!/bin/bash 
+  a='nhap so '
+  select so in 1 2 3 4 5 6
+  do
+   case $so in  # truong hop có trong $so
+     1|2)
+     echo " dep "
+     ;;
+     4|3|5|6)
+     echo " so sau "
+     ;;
+     esac
+     done
+  # case ... esac giống như lệnh if else   
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+
+      
+      
+      
+      
+      
+   

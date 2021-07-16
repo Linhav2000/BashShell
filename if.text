@@ -1,0 +1,94 @@
+chia làm ba lệnh
+1.Lenh "if then fi"
+	# Cu Phap 
+	  if [ dieu kien de thuc hien lenh] 
+	  then
+	      # thuc hien lenh neu thoa man if
+	  fi
+	Vi Du :
+	#!/bin/bash
+	echo $1
+	echo $2
+	if [$1==$2]
+	then
+	 echo " a bang b"
+	fi
+	nguoc lai
+2.Lenh if else fi
+# lệnh này rẽ ra hai nhánh
+	#Cu Phap
+	if [dieu kien de thuc hien]
+	then 
+	   # thuc hien lenh neu if dung
+	else
+	   # thuc hien lenh neu if sai
+	fi
+	Vi Du :
+	#!/bin/bash
+	echo $1
+	echo $2
+	if [$1==$2]
+	then
+	 echo " a bang b"
+	 else
+	 echo " a!=b "
+	fi
+3.Lenh if elif fi 
+#lệnh này giúp ta rẽ ra N nhánh
+#Cú Pháp 
+   if [dieu kien de thuc hien 1]
+	then 
+	   # thuc hien lenh neu if 1 dung
+	elif [ dieu kien thuc hien 2 ]
+	then   
+	   # thuc hien lenh neu elif 2 dung
+	elif [ dieu kien thuc hien 3 ]
+	then 
+	   # thuc hien lenh neu elif 3 dung 
+	else 
+	      chay neu ca ba câu lênh trên sai
+	fi
+  Ví Dụ :
+  #!/bin/bash
+  echo $1
+  echo $2 
+  if [$1==$2]
+  then
+   echo " bang nhau "
+  elif [$1 != $2 ]
+  then 
+  echo " khac nhau "
+  elif [ $1 >= $2 ]
+  then 
+  echo " lon hon "
+  else 
+    echo " empty "
+ fi 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+Lệnh "case "
+#giống như lệnh if else 
+#Cú Pháp 
+	case word in
+	   pattern1)
+	      Statement(s) 
+	      ;;
+	   pattern2)
+	      Statement(s) 
+	      ;;
+	   pattern3)
+	      Statement(s) 
+	      ;;
+	   *)
+	     Default 
+	     ;;
+	esac
+#Ví Du :
+echo -n "nhap so tuoi "
+read tuoi 
+case $tuoi in 
+   1)
+    echo " tre "
+   ;;
+   2)
+   echo "gia "
+   ;;
+   3)
+   echo "gai"
+   ;;
+esac
+   
+Ví Dụ 2 :Dọc Thong tin cua file
