@@ -1,0 +1,31 @@
+
+#Cach su dung bien nhap san
+#Ten bien can VIET HOA (khong duoc bat dau bang so va !,*,-)
+
+NAME="Tran Hai Linh " # dat ten cho bien
+TUOI=21               # gan gia tri cho bien
+echo $NAME $TUOI      # su dung $ de goi gia tri luu trong bien
+
+#Cach nhap bien tu ban phim 
+#Su dung lenh "read"
+echo " nhap bien tu ban phim " #hien len
+read a                         # " read -t "_gio han so giay nhap vao 
+                               # " read -s " khong hien thi noi dung nguoi nhap
+echo $a
+
+#Cac bien dac biet 
+# "$0" chua ten file hien tai
+# "$1 $2 $3 ..." tuong ung voi cac tham so dua vao script
+# "$*":Cac tham so dua vao duoc noi thanh mot chuoi va cach nhau
+# "$@":Cac tham so duoc phan biet
+vd
+echo $1
+echo $2
+echo $3
+
+Ket Qua
+bash linh.sh hoc dot
+hoc
+dot
+
+
