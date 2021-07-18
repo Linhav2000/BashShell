@@ -1,0 +1,55 @@
+1.Biến ĐẶc biệt
+$0 : hiện tên file scrip 
+$n: truyền các tham số vào
+$#:tổng tham số truyền vào
+$*:các tham số đưa vào sẽ được nối thành một chuỗi 
+   Vd :
+   #!/bin/bash
+     echo  " nhap ten"$*"
+     for str in "$*"
+     do
+      echo $str
+     done 
+$@:các tham số đưa vào sẽ được phân biệt một cách riêng lẽ từng tham số
+     #!/bin/bash
+       echo "nhap ten"$@"
+       for str in "$@"
+       do
+        echo $str
+       done
+2.So Sánh quan hệ
+	"-eq" => Bằng nhau (Equal)
+	"-ne" => Không bằng nhau (Not equal)
+	"-lt" => Nhỏ hơn (Less than)
+	"-gt" => Lớn hơn (Greater than)
+	"-le" => Nhỏ hơn hoặc bằng (Less or equal)
+	"-ge" => Lớn hơn hoặc bằng (Greater or equal)
+	"-o"  => OR
+	"-a"  => AND
+3.Kiểm Tra Tập Tin 
+	[[ -f FILE ]] : Trả về đúng nếu file_var là 1 tập tin.
+	[[ -x FILE ]]: Trả về đúng nếu var là tập tin và có quyền thực thi (executable).
+	[[ -d FILE ]] : Trả về đúng nếu var là 1 thư mục.
+	[[ -e FILE ]] : Trả về đúng nếu var tồn tại.
+	[[ -w FILE ]] : Trả về đúng nếu var là 1 tập tin và có quyền ghi (writable).
+	[[ -r FILE ]] : Trả về đúng nếu var là 1 tập tin và có quyền đọc (readable).
+	[[ -h FILE ]] : Trả về đúng nếu var là 1 liên kết mềm (symlink).
+	[[ -s FILE ]] : Trả về đúng nếu file có dung lượng lớn hơn 0 bytes. 
+	[[ FILE1 -ef FILE2 ]] : Trả về TRUE nếu cùng là 1 file
+
+ 4.Cách tính toán trong bash 
+   -Dùng # "expr" 
+        vd expr 1+1
+        kq: expr $linh +1  
+   -Dùng #" let " 
+         vd: let var=1+1 
+         kq:  let a+1
+              let $a+=1
+    - Dùng "+" "-" "*" "/" 
+    - Dùng "%" chia lấy dư
+           "==" so sanh
+           "="  Phép gán	
+           "!=" Phép so sánh không bằng
+    - Dùng "-o" toán tử (or)
+    - Dùng "-a" toán tử (and)
+           
